@@ -47,7 +47,7 @@ export default async function DailyStats() {
 }
 
 async function getDailyStatistic() {
-  const res = await fetch("http://localhost:3000/api/statistic", {
+  const res = await fetch(`${process.env.URL}/api/statistic`, {
     next: { revalidate: 600 },
   });
   const data = await res.json();
