@@ -56,7 +56,7 @@ export default function CarStatusTable() {
   );
 }
 
-async function getLiveCarStatus() {
+function getLiveCarStatus() {
   const mockData = [
     {
       id: 1,

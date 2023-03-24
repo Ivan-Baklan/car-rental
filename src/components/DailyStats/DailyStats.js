@@ -2,8 +2,8 @@ import HireItem from "../HireItem/HireItem";
 import ValueStats from "../ValueStats/ValueStats";
 import styles from "./DailyStats.module.scss";
 
-export default async function DailyStats() {
-  const statsData = await getDailyStatistic();
+export default function DailyStats() {
+  const statsData = getDailyStatistic();
 
   return (
     <section className={styles["todaysStats"]}>
@@ -46,7 +46,7 @@ export default async function DailyStats() {
   );
 }
 
-async function getDailyStatistic() {
+function getDailyStatistic() {
   const mockData = {
     income: { week: "25658.00", today: "9460.00", yesterday: "9940.00" },
     expences: { week: "22658.00", today: "5660.00", yesterday: "5240.00" },
